@@ -73,7 +73,7 @@ body {
 
 .nav__close,
 .nav__toggle {
-  display: none;
+  display: non;
 }
 
 /* ======  Menu de Navigation sur mobile ====== */
@@ -81,6 +81,12 @@ body {
   .nav__close,
   .nav__toggle {
     display: initial;
+  }
+
+  .nav__close {
+    position: absolute;
+    top: 10px;
+    right: 95px;
   }
 
   .nav__list {
