@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- REMIXICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Portofolio</title>
   </head>
@@ -10,7 +17,7 @@
   <body>
     <header class="header">
       <nav class="nav__header">
-        <div class="title__header">Kwon <span>Gee</span></div>
+        <a href="#" class="title__header">Kwon <span>Gee</span></a>
 
         <div>
           <ul class="nav__list">
@@ -20,6 +27,16 @@
             <li><a href="#" class="nav__link">Compétences</a></li>
             <li><a href="#" class="nav__link">Contact</a></li>
           </ul>
+
+          <!-- Button Fermer -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-large-line"></i>
+          </div>
+        </div>
+
+        <!-- Button Toggle -->
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="ri-menu-3-fill"></i>
         </div>
       </nav>
     </header>
