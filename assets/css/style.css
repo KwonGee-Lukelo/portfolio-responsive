@@ -21,8 +21,13 @@ body {
 }
 
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: var(--color-background-section);
-  padding: 1em;
+  padding: 1.2em;
+  color: var(--color-texte);
 }
 
 .nav__header {
@@ -32,6 +37,7 @@ body {
 }
 
 .title__header {
+  text-decoration: none;
   font-size: var(--size-paragraphe);
   font-size: 1.5rem;
   font-weight: 900;
@@ -54,6 +60,7 @@ body {
   color: var(--color-texte);
   padding: 0 1.2em;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .active {
@@ -62,4 +69,29 @@ body {
 
 .nav__link:hover {
   color: var(--color-button);
+}
+
+.nav__close,
+.nav__toggle {
+  display: none;
+}
+
+/* ======  Menu de Navigation sur mobile ====== */
+@media screen and (max-width: 890px) {
+  .nav__close,
+  .nav__toggle {
+    display: initial;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--color-background-section);
+    padding: 2em;
+    row-gap: 20px;
+  }
 }
