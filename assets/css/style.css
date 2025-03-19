@@ -28,9 +28,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--color-background-sectio);
   padding: 1.2em;
   color: var(--color-texte);
+}
+
+/*Pour mettre de l'ombre en bas de la barre de navigation
+quand on va scroller*/
+.shadow__header {
+  background-color: var(--color-background);
+  box-shadow: 2px 0 8px 5px rgb(32, 32, 32);
 }
 
 .nav__header {
@@ -115,4 +121,8 @@ body {
     box-shadow: 2px 0 8px 5px rgb(32, 32, 32);
     transition: 0.5s;
   }
+}
+
+main {
+  margin-top: 15rem;
 }
