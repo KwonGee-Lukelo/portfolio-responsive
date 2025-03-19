@@ -1,4 +1,7 @@
+/* Importation de la font */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Saira:wght@100..900&display=swap");
+
+/* Déclarations des differentes couleurs */
 :root {
   --color-background: #007e61;
   --color-background-section: #00b494;
@@ -25,7 +28,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: var(--color-background-section);
+  background-color: var(--color-background-sectio);
   padding: 1.2em;
   color: var(--color-texte);
 }
@@ -73,31 +76,43 @@ body {
 
 .nav__close,
 .nav__toggle {
-  display: non;
+  display: none;
 }
 
 /* ======  Menu de Navigation sur mobile ====== */
 @media screen and (max-width: 890px) {
-  .nav__close,
+  .title__header {
+    font-size: 1.125rem;
+  }
+
+  .nav__list {
+    display: none;
+  }
+
   .nav__toggle {
     display: initial;
   }
 
-  .nav__close {
+  .nav__close__mobile {
+    display: initial;
     position: absolute;
     top: 10px;
     right: 95px;
+    z-index: 1;
   }
 
-  .nav__list {
+  .nav__list__mobile {
+    display: flex;
     flex-direction: column;
     position: absolute;
     top: 0px;
     right: -15px;
     width: 100%;
     text-align: center;
-    background-color: var(--color-background-section);
+    background-color: var(--color-background);
     padding: 2em;
     row-gap: 20px;
+    box-shadow: 2px 0 8px 5px rgb(32, 32, 32);
+    transition: 0.5s;
   }
 }
