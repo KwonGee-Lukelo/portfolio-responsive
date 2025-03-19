@@ -1,4 +1,3 @@
-const header = document.querySelector(".header");
 const btnMenu = document.querySelector("#nav-toggle");
 const btnClose = document.querySelector("#nav-close");
 const navLink = document.querySelectorAll(".nav__link");
@@ -6,6 +5,7 @@ const navLink = document.querySelectorAll(".nav__link");
 //Evenement
 btnMenu.addEventListener("click", menu);
 btnClose.addEventListener("click", close);
+window.addEventListener("scroll", shadowHeader);
 
 //Function pour ouvrir menu de navigation (Hamburger) sur petit écran
 function menu(e) {
@@ -29,3 +29,11 @@ const linkAction = () => {
   document.querySelector(".nav__close").classList.remove("nav__close__mobile");
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+function shadowHeader() {
+  const header = document.querySelector(".header");
+
+  this.scrollY >= 50
+    ? header.classList.add("shadow__header")
+    : header.classList.remove("shadow__header");
+}
