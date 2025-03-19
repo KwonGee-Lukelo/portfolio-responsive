@@ -3,11 +3,11 @@
 
 /* Déclarations des differentes couleurs */
 :root {
-  --color-background: #007e61;
-  --color-background-section: #00b494;
-  --color-button: #4aedc9;
+  --color-background: /*#007e61*/ #000000;
+  --color-background-section: /*#00b494*/ #053a77;
+  --color-button: /*#4aedc9*/ #064690;
   --color-texte: #fff;
-  --color-texte2: #4aedc9;
+  --color-texte2:/* #4aedc9*/ #064690;
   --size-title: 2rem;
   --size-paragraphe: 1.015rem;
 }
@@ -15,6 +15,10 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -123,6 +127,70 @@ quand on va scroller*/
   }
 }
 
+/*========= MAIN =========*/
 main {
-  margin-top: 15rem;
+  width: 72%;
+  margin: 12em auto;
+}
+
+/* hero section */
+.hero__section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__presentation {
+  color: var(--color-texte);
+}
+
+.hero__presentation h1 {
+  font-size: var(--size-title);
+  line-height: 1.35em;
+  margin-bottom: 1em;
+}
+
+.hero__presentation h1 span {
+  color: var(--color-texte2);
+}
+
+.hero__presentation small {
+  font-size: 1.3rem;
+}
+
+button {
+  margin-top: 2em;
+  border: none;
+}
+
+.btn__hero {
+  background-color: var(--color-texte2);
+  color: var(--color-texte);
+  text-decoration: none;
+  padding: 1em;
+  font-size: var(--size-paragraphe);
+}
+
+.shape__hero {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background-color: var(--color-background-section);
+  z-index: -1;
+}
+
+.image__hero {
+  position: absolute;
+  top: -7em;
+  left: 35px;
+  width: 280px;
+  mask-image: linear-gradient(
+    to bottom,
+    var(--color-texte2) 50%,
+    transparent 100%
+  );
+  /* background-color: var(--color-texte2);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
+  z-index: -1;
 }
