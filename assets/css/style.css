@@ -158,6 +158,25 @@ main {
   font-size: 1.3rem;
 }
 
+.social__hero {
+  margin: 1.3em 0;
+}
+
+.social__hero a {
+  text-decoration: none;
+  color: var(--color-texte);
+  font-size: 1.5rem;
+}
+
+.link__social__2,
+.link__social__3 {
+  padding: 0 0.8em;
+}
+
+.social__hero a:hover {
+  color: var(--color-button);
+}
+
 button {
   margin-top: 2em;
   border: none;
