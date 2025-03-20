@@ -30,9 +30,13 @@ const linkAction = () => {
 };
 navLink.forEach((n) => n.addEventListener("click", linkAction));
 
+/*Fonction qui permet d'appliquer l'ombre à la 
+barre de navigation si en scrollant l'axe de abscisse 
+devient superieur ou egal 50*/
 function shadowHeader() {
   const header = document.querySelector(".header");
 
+  //Une condition ternaire
   this.scrollY >= 50
     ? header.classList.add("shadow__header")
     : header.classList.remove("shadow__header");
