@@ -241,7 +241,8 @@ button:hover {
 }
 
 /* Apropos section */
-.apropos__section {
+.apropos__section,
+.skills__section {
   padding: 5em 0;
   background-color: var(--color-background-section2);
 }
@@ -382,8 +383,107 @@ button:hover {
   padding: 1em;
 }
 
+/* Skills section */
+.container__skills__section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  width: 72%;
+  margin: 0 auto;
+  row-gap: 20px;
+}
+
+.soft__skills,
+.hard__skills {
+  border: 2px solid var(--color-background);
+  background-color: var(--color-background);
+  padding: 1em;
+  margin: 0.5em;
+  color: var(--color-texte);
+}
+
+.soft__skills h2,
+.hard__skills h2 {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.soft__skill__1,
+.soft__skill__2,
+.soft__skill__3,
+.hard__skill__1,
+.hard__skill__2,
+.hard__skill__3,
+.hard__skill__4,
+.hard__skill__5,
+.hard__skill__6 {
+  margin: 1em 0;
+}
+
+.title__skill__1,
+.title__skill__2,
+.title__skill__3,
+.title__skill__4,
+.title__skill__5,
+.title__skill__6 {
+  font-weight: 500;
+}
+
+.progress__bar__skill__1,
+.progress__bar__skill__2,
+.progress__bar__skill__3,
+.progress__bar__skill__4,
+.progress__bar__skill__5,
+.progress__bar__skill__6 {
+  width: 100%;
+  padding: 2px;
+  background-color: var(--color-background-section2);
+  border-radius: 30px;
+  margin: 0.5em 0;
+}
+
+.color__progress__bar__skill__1,
+.color__progress__bar__skill__2,
+.color__progress__bar__skill__3,
+.color__progress__bar__skill__4,
+.color__progress__bar__skill__5,
+.color__progress__bar__skill__6,
+.color__soft__progress__bar__skill__1,
+.color__soft__progress__bar__skill__2,
+.color__soft__progress__bar__skill__3 {
+  background-color: var(--color-button);
+  padding: 2px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 0.595rem;
+}
+
+.color__progress__bar__skill__1,
+.color__soft__progress__bar__skill__3 {
+  width: 90%;
+}
+.color__progress__bar__skill__2 {
+  width: 85%;
+}
+.color__progress__bar__skill__3,
+.color__soft__progress__bar__skill__1 {
+  width: 75%;
+}
+.color__progress__bar__skill__4 {
+  width: 50%;
+}
+.color__progress__bar__skill__5 {
+  width: 88%;
+}
+.color__progress__bar__skill__6,
+.color__soft__progress__bar__skill__2 {
+  width: 80%;
+}
+
 @media screen and (max-width: 890px) {
-  .projets__section {
+  .projets__section,
+  .container__skills__section {
     display: flex;
     flex-direction: column;
     width: 90%;
