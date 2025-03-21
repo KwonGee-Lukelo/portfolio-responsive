@@ -185,7 +185,8 @@ button {
 }
 
 .btn__hero,
-.btn__apropos {
+.btn__apropos,
+.btn__projets {
   color: var(--color-texte);
   text-decoration: none;
   font-size: var(--size-paragraphe);
@@ -314,5 +315,77 @@ button:hover {
   .apropos__description {
     margin-top: 8em;
     font-size: 1rem;
+  }
+}
+
+/* Projets section */
+.projets__section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  width: 72%;
+  margin: 0 auto;
+  padding: 5em 0;
+}
+
+.card__projets__1,
+.card__projets__2,
+.card__projets__3 {
+  border: 2px solid var(--color-background-section2);
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 0.8em;
+  margin: 0.5em;
+  transition: 0.3s;
+}
+
+.card__projets__1:hover,
+.card__projets__2:hover,
+.card__projets__3:hover {
+  cursor: pointer;
+  box-shadow: 2px 0 8px 5px rgb(32, 32, 32);
+}
+
+.head__card__projets__1,
+.head__card__projets__2,
+.head__card__projets__3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head__card__projets__1 img,
+.head__card__projets__2 img,
+.head__card__projets__3 img {
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.body__card__projets__1__description,
+.body__card__projets__2__description,
+.body__card__projets__3__description {
+  color: var(--color-texte);
+  line-height: 25px;
+}
+
+.tecno {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--color-texte);
+}
+
+.tecno__logo {
+  color: var(--color-texte);
+  font-size: 1.3rem;
+  padding: 1em;
+}
+
+@media screen and (max-width: 890px) {
+  .projets__section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
   }
 }
