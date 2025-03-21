@@ -5,6 +5,7 @@
 :root {
   --color-background: /*#007e61*/ #000000;
   --color-background-section: /*#00b494*/ #053a77;
+  --color-background-section2: #0d0d0d;
   --color-button: /*#4aedc9*/ #064690;
   --color-texte: #fff;
   --color-texte2:/* #4aedc9*/ #064690;
@@ -34,6 +35,7 @@ body {
   left: 0;
   padding: 1.2em;
   color: var(--color-texte);
+  z-index: 999;
 }
 
 /*Pour mettre de l'ombre en bas de la barre de navigation
@@ -128,13 +130,11 @@ quand on va scroller*/
 }
 
 /*========= MAIN =========*/
-main {
-  width: 72%;
-  margin: 12em auto;
-}
 
 /* hero section */
 .hero__section {
+  width: 72%;
+  margin: 12em auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -150,7 +150,7 @@ main {
   margin-bottom: 1em;
 }
 
-.hero__presentation h1 span {
+span {
   color: var(--color-texte2);
 }
 
@@ -180,14 +180,21 @@ main {
 button {
   margin-top: 2em;
   border: none;
+  background-color: var(--color-texte2);
+  padding: 1em;
 }
 
-.btn__hero {
-  background-color: var(--color-texte2);
+.btn__hero,
+.btn__apropos {
   color: var(--color-texte);
   text-decoration: none;
-  padding: 1em;
   font-size: var(--size-paragraphe);
+  transition: color 0.5s;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--color-background-section);
 }
 
 .shape__hero {
@@ -209,7 +216,103 @@ button {
     var(--color-texte2) 50%,
     transparent 100%
   );
-  /* background-color: var(--color-texte2);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
   z-index: -1;
+}
+
+/*Affichage de la section hero sur le petite ecran*/
+@media screen and (max-width: 890px) {
+  .hero__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shape__hero {
+    top: 150px;
+    width: 280px;
+    height: 280px;
+  }
+
+  .image__hero {
+    top: -7em;
+    left: 20px;
+    width: 235px;
+  }
+}
+
+/* Apropos section */
+.apropos__section {
+  padding: 5em 0;
+  background-color: var(--color-background-section2);
+}
+
+.container__apropos__section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  width: 72%;
+  margin: 0 auto;
+}
+
+.shape__apropos {
+  position: relative;
+  height: 400px;
+  width: 250px;
+  background-color: var(--color-background-section);
+  z-index: 1;
+}
+
+.image__shape__apropos img {
+  height: 400px;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.apropos__description {
+  margin-top: 1em;
+  color: var(--color-texte);
+  line-height: 25px;
+  font-size: 1.3rem;
+}
+
+/*Affichage de la section hero sur le petite ecran*/
+@media screen and (max-width: 890px) {
+  .container__apropos__section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .apropos__description {
+    margin-top: 4em;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .shape__apropos {
+    height: 350px;
+    width: 200px;
+  }
+  .image__shape__apropos img {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .shape__apropos {
+    position: static;
+    height: 150px;
+    width: 50px;
+  }
+  .image__shape__apropos img {
+    position: static;
+    height: 250px;
+    top: 0;
+    left: 0;
+  }
+
+  .apropos__description {
+    margin-top: 8em;
+    font-size: 1rem;
+  }
 }
