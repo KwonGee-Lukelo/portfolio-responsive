@@ -2,12 +2,12 @@ const btnMenu = document.querySelector("#nav-toggle");
 const btnClose = document.querySelector("#nav-close");
 const navLink = document.querySelectorAll(".nav__link");
 const form = document.querySelector("#form");
-const btnForm = document.querySelector("#submit");
 
 //Evenement
 btnMenu.addEventListener("click", menu);
 btnClose.addEventListener("click", close);
 window.addEventListener("scroll", shadowHeader);
+window.addEventListener("scroll", scrollPage);
 form.addEventListener("submit", validateForm);
 
 //Function pour ouvrir menu de navigation (Hamburger) sur petit écran
@@ -43,6 +43,15 @@ function shadowHeader() {
   this.scrollY >= 50
     ? header.classList.add("shadow__header")
     : header.classList.remove("shadow__header");
+}
+
+//Fonction qui permet de scroller en cliquant sur la flèche
+function scrollPage() {
+  const btnScroll = document.querySelector(".btn__scroll");
+
+  this.scrollY >= 350
+    ? btnScroll.classList.add("btn__scroll__visible")
+    : btnScroll.classList.remove("btn__scroll__visible");
 }
 
 // Fonction qui nous permet de validé le formulaire
