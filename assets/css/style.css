@@ -483,6 +483,26 @@ button:hover {
   width: 80%;
 }
 
+.btn__scroll {
+  position: fixed;
+  right: 2.5em;
+  bottom: 10px;
+  display: inline-block;
+  color: var(--color-texte);
+  background-color: var(--color-button);
+  padding: 0.6em;
+}
+
+.btn__scroll i {
+  color: var(--color-texte);
+  background-color: var(--color-button);
+}
+
+.btn__scroll__visible {
+  display: initial;
+  bottom: 3rem;
+}
+
 @media screen and (max-width: 890px) {
   .projets__section,
   .container__skills__section {
@@ -558,6 +578,7 @@ button[type="submit"] {
   font-size: var(--size-paragraphe);
 }
 
+/* =========== SECTION FOOTER ======== */
 footer div {
   color: #fff;
   text-align: center;
