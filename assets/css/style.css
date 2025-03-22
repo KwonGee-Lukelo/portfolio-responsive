@@ -557,3 +557,9 @@ button[type="submit"] {
   color: var(--color-texte);
   font-size: var(--size-paragraphe);
 }
+
+footer div {
+  color: #fff;
+  text-align: center;
+  padding: 0.7em;
+}
