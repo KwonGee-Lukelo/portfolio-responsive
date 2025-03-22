@@ -85,6 +85,12 @@ function validateForm(e) {
       return;
     }
     alert("Votre message a été envoyer avec success!");
+    // On reinitialise tout les champs
+    formElement.nom.value = "";
+    formElement.prenom.value = "";
+    formElement.email.value = "";
+    formElement.sujet.value = "";
+    formElement.message.value = "";
     return;
   } else {
     alert("Veuillez remplir tout les champs correctement");
