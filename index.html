@@ -23,7 +23,7 @@
         <div>
           <ul class="nav__list">
             <li>
-              <a href="#" class="nav__link active">Acceuil</a>
+              <a href="#acceuil" class="nav__link active">Acceuil</a>
             </li>
             <li>
               <a href="#apropos" class="nav__link">A propos</a>
@@ -53,7 +53,7 @@
     </header>
 
     <main>
-      <section class="hero__section">
+      <section class="hero__section" id="acceuil">
         <div class="hero__presentation">
           <h1>
             Salut ! <br />Je suis <span>Kwon Gee Prosper</span>,<br />Etudiant
@@ -80,7 +80,7 @@
           </div>
 
           <button>
-            <a href="#" class="btn__hero"
+            <a href="#projets" class="btn__hero"
               >Voir mes projets <i class="ri-scroll-to-bottom-line"></i
             ></a>
           </button>
@@ -342,6 +342,12 @@
               </div>
             </div>
           </div>
+
+          <div class="btn__scroll">
+            <a href="#acceuil">
+              <i class="ri-arrow-up-line"></i>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -363,33 +369,33 @@
             <label for="nom">Nom</label>
             <input
               type="text"
+              name="nom"
               placeholder="Entrez votre nom"
               id="nom"
-              required
             />
 
             <label for="prenom">Prenom</label>
             <input
               type="text"
+              name="prenom"
               placeholder="Entrez votre prenom"
               id="prenom"
-              required
             />
 
-            <label for="email">Prenom</label>
+            <label for="email">E-mail</label>
             <input
               type="email"
+              name="email"
               placeholder="pkwongee@gmail.com"
               id="email"
-              required
             />
 
             <label for="sujet">Sujet</label>
             <input
               type="text"
+              name="sujet"
               placeholder="Entrez le sujet de votre message"
               id="sujet"
-              required
             />
 
             <label for="message">Message</label>
@@ -408,7 +414,7 @@
     </main>
 
     <footer>
-      <div>&copyKwon Gee Prosper - Tout droit réservé</div>
+      <div>&copy2025 Kwon Gee Prosper - Tous droits réservés</div>
     </footer>
 
     <script src="assets/js/app.js"></script>
