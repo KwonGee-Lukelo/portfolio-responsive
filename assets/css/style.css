@@ -33,7 +33,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1.2em;
+  padding: 1.5em;
   color: var(--color-texte);
   z-index: 999;
 }
@@ -89,6 +89,10 @@ quand on va scroller*/
 .nav__close,
 .nav__toggle {
   display: none;
+}
+.nav__close:hover,
+.nav__toggle:hover {
+  cursor: pointer;
 }
 
 /* ======  Menu de Navigation sur mobile ====== */
@@ -226,6 +230,7 @@ button:hover {
   .hero__section {
     display: flex;
     flex-direction: column;
+    width: 90%;
   }
 
   .shape__hero {
@@ -487,29 +492,30 @@ button:hover {
   position: fixed;
   right: 2.5em;
   bottom: 10px;
-  display: inline-block;
+  display: none;
   color: var(--color-texte);
   background-color: var(--color-button);
   padding: 0.6em;
+  z-index: 10;
+}
+
+.btn__scroll:hover {
+  cursor: pointer;
+  background-color: var(--color-background-section);
+}
+
+.btn__scroll a {
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn__scroll i {
   color: var(--color-texte);
-  background-color: var(--color-button);
 }
 
 .btn__scroll__visible {
   display: initial;
   bottom: 3rem;
-}
-
-@media screen and (max-width: 890px) {
-  .projets__section,
-  .container__skills__section {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-  }
 }
 
 /* ========= SECTION CONTACT ======== */
@@ -576,6 +582,38 @@ form > textarea::placeholder {
 button[type="submit"] {
   color: var(--color-texte);
   font-size: var(--size-paragraphe);
+}
+
+@media screen and (max-width: 890px) {
+  .projets__section,
+  .container__skills__section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .contact__section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .formulaire {
+    padding: 1em 0 1em 0;
+    margin: 2em 0 2em 0;
+  }
+
+  .social__contact {
+    width: 30%;
+  }
+
+  form {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .btn__scroll {
+    right: 1em;
+  }
 }
 
 /* =========== SECTION FOOTER ======== */
