@@ -288,6 +288,7 @@ button:hover {
   .container__apropos__section {
     display: flex;
     flex-direction: column;
+    width: 90%;
   }
 
   .apropos__description {
